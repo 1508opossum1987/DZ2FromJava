@@ -71,5 +71,108 @@ void main() {
     //Задача 5
     //Создать массив из 10 целых чисел. Заполнить его числами от 1 до 10 и вывести на экран
 
+    /*Random rand = new Random();
+
+    int[] array = new int[10];
+
+    for (int i=0;i<array.length;i++){
+        array[i]= rand.nextInt(10)+1;
+        System.out.print(array[i]+" ");
+    }*/
+
+    //Задача 6
+    //Найти сумму всех элементов массива.
+
+    /*Random rand = new Random();
+
+    System.out.println("Введите длину массива: ");
+    Scanner console = new Scanner(System.in);
+    int size = console.nextInt();
+
+    int[] array= new int [size];
+
+    int sum=0;
+
+    for (int i=0;i<size;i++){
+        array[i]= rand.nextInt(199)-99;
+        System.out.print(array[i]+" ");
+        sum+=array[i];
+    }
+
+    System.out.println();
+    System.out.println("Сумма элементов массива: "+sum);*/
+
+    //Задача 7
+    //Найти максимальный элемент массива.
+
+    /*Random rand = new Random();
+
+    System.out.println("Введите длину массива: ");
+    Scanner console = new Scanner(System.in);
+    int size = console.nextInt();
+
+    int[] array= new int [size];
+
+    for (int i=0;i<array.length;i++) {
+        array[i] = rand.nextInt(101);
+        System.out.print(array[i] + " ");
+    }
+
+    int max = array[0];
+    for (int arr:array) {
+        if (arr>max)
+            max=arr;
+    }
+
+    System.out.println();
+    System.out.println("Максимальный элемент массива: "+max);*/
+
+
+    //Задача 8
+    //Посчитать количество чётных чисел в массиве.
+
+    /*Random rand = new Random();
+
+    System.out.println("Введите длину массива: ");
+    Scanner console = new Scanner(System.in);
+    int size = console.nextInt();
+
+    int[] array = new int[size];
+
+    for (int i = 0; i < size; i++) {
+        array[i] = rand.nextInt(101);
+        System.out.print(array[i] + " ");
+    }
+
+    int count=0;
+
+    for (int arr:array) {
+        if (arr%2==0)
+            count++;
+    }
+    System.out.println();
+    System.out.println("Четных элементов в массиве: "+count);*/
+
+
+    //Задача 9
+    //Создать двумерный массив 4×4.
+    //Заполнить его числами от 1 до 16 и красиво вывести на экран.
+
+    /*int[][] array= new int[4][4];
+
+    int count=1;
+    for (int i=0;i<4;i++){
+        for (int j=0;j<4;j++){
+            array[i][j]=count;
+            count++;
+        }
+    }
+
+    for (int i = 0; i < 4; i++) {
+        for (int j = 0; j < 4; j++) {
+            System.out.printf("%4d", array[i][j]);
+        }
+        System.out.println();
+    }*/
 
 }
