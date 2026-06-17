@@ -175,4 +175,87 @@ void main() {
         System.out.println();
     }*/
 
+    //Задача 10
+    //Написать метод: int square(int number)
+    //который возвращает квадрат числа.
+
+    /*System.out.println("Введите число: ");
+    Scanner console = new Scanner(System.in);
+    int number = console.nextInt();
+
+    System.out.println("Квадрат числа: " + Square.square(number));*/
+
+    //Задача 11
+    //Написать метод: double average(double a, double b, double c)
+    //который возвращает среднее арифметическое трёх чисел.
+
+    /*System.out.println("Введите 3 числа: ");
+    Scanner console = new Scanner(System.in);
+    double a = console.nextDouble();
+    double b = console.nextDouble();
+    double c = console.nextDouble();
+
+    System.out.println("Среднее арифметическое введенных чисел: " + average(a, b, c));*/
+
+    //Задача 12
+    //Написать метод: boolean isEven(int number)
+    //который определяет, является ли число чётным.
+
+    /*System.out.println("Введите число: ");
+    Scanner console = new Scanner(System.in);
+    int number = console.nextInt();
+
+    System.out.println("Является ли число " + number + " четным: " + isEven(number));*/
+
+    //Задача 13
+    //Написать метод char toUpperCase(char ch)
+    //который переводит английскую букву в верхний регистр.
+
+    /*System.out.println("Введите символ: ");
+
+    Scanner scanner = new Scanner(System.in);
+    char symbol = scanner.next().charAt(0);
+
+    System.out.println(toUpperCase(symbol));*/
+
+    //Задача 14
+    //Написать метод int[] createArray(int size)
+    //который создаёт массив заданного размера и заполняет его числами от 1 до size.
+
+    /*System.out.println("Введите размер массива: ");
+    Scanner console = new Scanner(System.in);
+    int size = console.nextInt();
+
+    int[] array = createArray(size);
+
+    for (int i = 0; i < size; i++) {
+        System.out.print(array[i] + " ");
+    }*/
+
+}
+
+static double average(double a, double b, double c) {
+    return Math.round((a + b + c) / 3 * 100) / 100.00;
+}
+
+static boolean isEven(int number) {
+    if (number % 2 == 0)
+        return true;
+    else
+        return false;
+}
+
+static char toUpperCase(char ch) {
+    return Character.toUpperCase(ch);
+}
+
+static int[] createArray(int size) {
+    Random rand = new Random();
+    int[] array = new int[size];
+
+    for (int i = 0; i < size; i++) {
+        array[i] = rand.nextInt(size) + 1;
+    }
+
+    return array;
 }
