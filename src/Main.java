@@ -232,10 +232,190 @@ void main() {
         System.out.print(array[i] + " ");
     }*/
 
+    //Задача 15
+    //Пользователь вводит номер дня недели (1–7).
+    //С помощью switch вывести название дня недели.
+
+    /*System.out.println("Put the number of weekday from 1 to 7: ");
+    Scanner console = new Scanner(System.in);
+    int number = console.nextInt();
+
+    switch (number){
+        case 1:
+            System.out.println("Monday");
+            break;
+        case 2:
+            System.out.println("Tuesday");
+            break;
+        case 3:
+            System.out.println("Wednesday");
+            break;
+        case 4:
+            System.out.println("Thursday");
+            break;
+        case 5:
+            System.out.println("Friday");
+            break;
+        case 6:
+            System.out.println("Saturday");
+            break;
+        case 7:
+            System.out.println("Sunday");
+            break;
+        default:
+            System.out.println("This number is error");
+    }*/
+
+    //Задача 16
+    //Пользователь вводит номер месяца.
+    //С помощью switch вывести время года.
+
+    /*System.out.println("Put the number of month from 1 to 12: ");
+    Scanner console = new Scanner(System.in);
+
+
+    while(true){
+        int month = console.nextInt();
+        switch (month) {
+            case 1, 2, 12:
+                System.out.println("Winter");
+                break;
+            case 3, 4, 5:
+                System.out.println("Spring");
+                break;
+            case 6, 7, 8:
+                System.out.println("Summer");
+                break;
+            case 9, 10, 11:
+                System.out.println("Autumn");
+                break;
+            default:
+                System.out.println("Number of this month is uncorrect");
+                break;
+        }
+    }*/
+
+    //Задача 17
+    //Пользователь вводит символ арифметической операции:
+    //Затем вводит два числа. С помощью switch выполнить нужную операцию.
+
+    /*Scanner console = new Scanner(System.in);
+
+    while (true) {
+        System.out.println("Введите символ операции: ");
+        char symbol = console.next().charAt(0);
+        System.out.println("Введите первое число: ");
+        int a = console.nextInt();
+        System.out.println("Введите второе число: ");
+        int b = console.nextInt();
+        switch (symbol) {
+            case '+':
+                System.out.println(a + "+" + b + "=" + (a+b));
+                break;
+            case '-':
+                System.out.println(a + "-" + b + "=" + (a-b));
+                break;
+            case '*':
+                System.out.println(a + "*" + b + "=" + (a*b));
+                break;
+            case '/':
+                if(b==0){
+                    System.out.println("На ноль делить нельзя!");
+                    break;
+                }
+                else {
+                    System.out.println(a + "/" + b + "=" + (float)(a/b));
+                    break;
+                }
+            default:
+                System.out.println("Неизвестный символ!");
+                break;
+        }
+    }*/
+
+    //Задача 18
+    //Пользователь вводит оценку:
+    //С помощью switch вывести расшифровку:
+
+    /*Scanner console = new Scanner(System.in);
+
+    while (true){
+        System.out.println("Введите символ: ");
+        char symbol = console.next().charAt(0);
+        switch (symbol){
+            case 'A', 'a':
+                System.out.println("Отлично");
+                break;
+            case 'B', 'b':
+                System.out.println("Хорошо");
+                break;
+            case 'C', 'c':
+                System.out.println("Удовлетворительно");
+                break;
+            case 'D', 'd':
+                System.out.println("Неудовлетворительно");
+                break;
+            case 'F', 'f':
+                System.out.println("Провал");
+                break;
+            default:
+                System.out.println("Такую оценку не знаю");
+                break;
+        }
+    }*/
+
+    //Задача 19
+    //Создать меню:
+    //1. Найти квадрат числа
+    //2. Найти среднее трёх чисел
+    //3. Проверить число на чётность
+    //4. Выход
+    //Выбор пункта реализовать через switch, а вычисления вынести в отдельные методы.
+
+    Scanner console = new Scanner(System.in);
+
+    boolean mark = true;
+    while (mark){
+        System.out.println("Введите пункт меню: ");
+        System.out.println("1. Найти квадрат числа ");
+        System.out.println("2. Найти среднее арифметическое трех чисел ");
+        System.out.println("3. Проверить число на четность ");
+        System.out.println("4. Выход ");
+        int menu = console.nextInt();
+        switch (menu){
+            case 1:
+                int number = console.nextInt();
+                System.out.println("Квадрат числа: " + Square.square(number));
+                break;
+            case 2:
+                System.out.println("Введите три числа");
+                int a = console.nextInt();
+                int b = console.nextInt();
+                int c = console.nextInt();
+                System.out.println("Среднее арифметическое трех чисел: " + average(a, b, c));
+                break;
+            case 3:
+                System.out.println("Введите число для проверки на четность");
+                int num = console.nextInt();
+                System.out.println("Является ли число " + num + " четным: " + isEven(num));
+                break;
+            case 4:
+                System.out.println("Good Bye!");
+                mark=false;
+                break;
+            default:
+                System.out.println("Такого пункта нет в меню!");
+                break;
+        }
+    }
 }
 
 static double average(double a, double b, double c) {
     return Math.round((a + b + c) / 3 * 100) / 100.00;
+}
+
+static double average(int a, int b, int c) {
+    return Math.round(((double)a + (double)b + (double)c) / 3 * 100) / 100.00;
 }
 
 static boolean isEven(int number) {
